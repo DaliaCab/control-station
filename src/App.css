@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-background {
+  height: 100vh;
+  background-image: url('./assets/fondo.jpg'); /* Agregué la img de fondo aquí directamente */
+  background-size: cover;
+  background-position: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.game-container {
+  background-color: #001f3f; 
+  border: 5px solid #c0c0c0; 
+  border-radius: 15px;
+  padding: 30px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombra para darle profundidad */
+  font-family: "Press Start 2P", system-ui; /* El font está agregado desde index.html */
+}
+
+.game-button {
+  background-color: #007bff;
   color: white;
+  border: 2px solid #c0c0c0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  font-family: "Press Start 2P", system-ui;
 }
 
-.App-link {
-  color: #61dafb;
+.game-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.8);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.game-title {
+  color: white;
+  font-size: 34px;
+  margin-bottom: 20px;
 }
+h1 {
+  animation: flicker 1.5s infinite alternate;
+}
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+
+
+.game-status {
+  color: #c0c0c0;
+  font-size: 18px;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+p.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid;
+  width: 100%;
+  animation: typing 3.5s steps(40, end) forwards;
+}
+
+
